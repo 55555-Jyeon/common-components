@@ -1,0 +1,38 @@
+/* 정렬 관련 스타일 */
+
+// 중앙 정렬
+@mixin flex-center($direction: column) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+// 세로 중앙 정렬
+@mixin flex-vertical($horizontal: "flex-start", $direction: column) {
+  display: flex;
+  align-items: center;
+  justify-content: $horizontal;
+  flex-direction: $direction;
+}
+
+// 가로 중앙 정렬
+@mixin flex-horizontal($vertical: stretch, $direction: column) {
+  display: flex;
+  justify-content: center;
+  align-items: $vertical;
+  flex-direction: $direction;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin position-center($position: absolute, $top: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: translate(-#{$top}, -#{$left});
+}

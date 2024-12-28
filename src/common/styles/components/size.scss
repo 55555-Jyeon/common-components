@@ -1,0 +1,38 @@
+@use 'sass:math';
+
+/**
+ * @function removeUnit 단위를 제거하는 함수
+ * @param {number} value - 단위를 제거할 값
+ * @returns {number} - 단위가 제거된 값
+ */
+@function removeUnit($value) {
+  @return math.div($value, (($value * 0 + 1)));
+}
+
+/**
+ * @function px2rem 픽셀(px)을 rem으로 변환하는 함수
+ * @param {number} px - 변환할 픽셀 값
+ * @param {number} [base=16] - 기본 폰트 크기 (기본값: 16px)
+ * @returns {number} - 변환된 rem 값
+ *
+ * @example
+ * // 32px을 rem으로 변환
+ * $rem-value: px2rem(32px); // 결과: 2rem
+ */
+@function px2rem($px, $base: 16) {
+  @return math.div(removeUnit($px), $base) * 1rem;
+}
+
+/**
+ * @function px2em 픽셀(px)을 em으로 변환하는 함수
+ * @param {number} px - 변환할 픽셀 값
+ * @param {number} [base=16] - 기준 폰트 크기 (기본값: 16px)
+ * @returns {number} - 변환된 em 값
+ *
+ * @example
+ * // 20px을 em으로 변환
+ * $em-value: px2em(20px); // 결과: 1.25em
+ */
+@function px2em($px, $base: 16) {
+  @return math.div(removeUnit($px), $base) * 1em;
+}
