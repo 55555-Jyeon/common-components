@@ -1,16 +1,19 @@
-import { ReportHandler } from "web-vitals";
+import type { Metric } from "web-vitals";
+import { onCLS, onFID, onFCP, onLCP, onTTFB } from "web-vitals";
 
-const reportWebVitals = (onPerfEntry?: ReportHandler) => {
-    if (onPerfEntry && onPerfEntry instanceof Function) {
-        import("web-vitals").then(
-            ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                getCLS(onPerfEntry);
-                getFID(onPerfEntry);
-                getFCP(onPerfEntry);
-                getLCP(onPerfEntry);
-                getTTFB(onPerfEntry);
-            }
-        );
+// 반환 타입을 명시적으로 지정
+const reportWebVitals = (onPerfEntry?: (metric: Metric) => void): void => {
+    // null과 undefined를 명시적으로 체크
+    if (
+        onPerfEntry !== null &&
+        onPerfEntry !== undefined &&
+        onPerfEntry instanceof Function
+    ) {
+        onCLS(onPerfEntry);
+        onFID(onPerfEntry);
+        onFCP(onPerfEntry);
+        onLCP(onPerfEntry);
+        onTTFB(onPerfEntry);
     }
 };
 
