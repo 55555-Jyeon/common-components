@@ -28,6 +28,7 @@ module.exports = {
     rules: {
         "react/react-in-jsx-scope": "off", // React 17 이상에서는 필요 없음
         "prettier/prettier": ["error", { endOfLine: "auto" }], // Prettier와 줄바꿈 충돌 방지
+        "@typescript-eslint/consistent-type-definitions": "off",
     },
     settings: {
         react: {

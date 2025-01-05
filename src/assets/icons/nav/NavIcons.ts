@@ -11,23 +11,22 @@ import hamburg from "@/assets/icons/nav/inactive/hamburg.svg";
 import setting from "@/assets/icons/nav/inactive/setting.svg";
 
 export type NavIconsType = {
-  active: { [key: string]: string };
-  inactive: { [key: string]: string };
+    active: Record<string, string>;
+    inactive: Record<string, string>;
 };
 
 export const NavIcons: NavIconsType = {
-  active: {
-    chart: activeChart,
-    docs: activeDocs,
-    setting: activeSetting
-
-  },
-  inactive: {
-    alert: alert,
-    category: category,
-    chart: chart,
-    docs: docs,
-    hamburg: hamburg,
-    setting: setting
-  }
+    active: {
+        chart: activeChart,
+        docs: activeDocs,
+        setting: activeSetting,
+    },
+    inactive: {
+        alert,
+        category,
+        chart,
+        docs,
+        hamburg,
+        setting,
+    },
 };
