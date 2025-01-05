@@ -22,7 +22,16 @@ module.exports = {
     parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
+        extraFileExtensions: [".scss"],
     },
     plugins: ["react"],
-    rules: {},
+    rules: {
+        "react/react-in-jsx-scope": "off", // React 17 이상에서는 필요 없음
+        "prettier/prettier": ["error", { endOfLine: "auto" }], // Prettier와 줄바꿈 충돌 방지
+    },
+    settings: {
+        react: {
+            version: "detect", // React 버전을 자동으로 감지
+        },
+    },
 };

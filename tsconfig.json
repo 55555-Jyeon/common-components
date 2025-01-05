@@ -89,6 +89,7 @@
     },
     "include": [
         "./src/**/*", // 프로젝트의 모든 TypeScript 파일 포함
-        "./.eslintrc.js" // ESLint 설정 파일 포함
+        "./.eslintrc.js", // ESLint 설정 파일 포함
+        "global.d.ts"
     ]
 }
