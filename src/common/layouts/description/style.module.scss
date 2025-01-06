@@ -1,0 +1,27 @@
+@import "@/styles/common.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 18px;
+}
+.srcWrapper {
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    color: $system-black-04;
+}
+.src {
+    width: fit-content;
+    display: flex;
+    white-space: nowrap;
+}
+.desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: $system-black-06;
+    margin: 20px 0 18px;
+    word-break: keep-all;
+}
