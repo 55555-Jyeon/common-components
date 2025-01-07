@@ -1,7 +1,23 @@
-@import "@/common/styles/common.scss";
+@import "src/common/styles/common.scss";
 
 .container {
     background-color: aliceblue;
-    width: 100%;
     height: px2rem(60px);
+    padding: 0 px2rem(40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: px2rem(80px);
+}
+
+.iconWrapper {
+    width: px2rem(80px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -11,7 +11,7 @@
         "baseUrl": ".",
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         "paths": {
-            "@/assets/*": ["src/assets/*"]
+            "@/*": ["src/*"]
         },
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
@@ -96,6 +96,7 @@
         "craco.config.ts",
         "./.eslintrc.js", // ESLint 설정 파일 포함
         "global.d.ts",
+        "webpack.config.ts",
         "./cargo.config.ts"
     ]
 }
