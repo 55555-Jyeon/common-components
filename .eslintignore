@@ -3,6 +3,5 @@ node_modules/
 dist/
 build/
 public/
-*.scss
 .eslintrc.js
 craco.config.ts
