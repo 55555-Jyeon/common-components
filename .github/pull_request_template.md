@@ -17,7 +17,8 @@ PR이 다음 요구 사항을 충족하는지 확인하세요.
 
 ###### 코드 확인
 
-- [ ] prettier 및 ESlint 확인 (`npx prettier --write .`)
+- [ ] 커밋 전에 prettier 확인 (`npx prettier --write .`)
+- [ ] 커밋 전에 ESlint 확인 (`npx eslint .`)
 - [ ] 직접 만든 함수가 있다면 이에 대한 설명 추가 (ex. JS DOCS)
 - [ ] 변경 사항에 대한 테스트 완료 (버그 수정/기능에 대한 테스트)
 - [ ] 나중에 할 예정인 경우, `@TODO` 추가

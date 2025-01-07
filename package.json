@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@craco/craco": "^7.1.0",
         "@testing-library/react": "^13.4.0",
         "clsx": "^2.1.1",
         "cra-template-typescript": "1.2.0",
@@ -48,6 +49,9 @@
         ]
     },
     "devDependencies": {
+        "@craco/types": "^7.1.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@types/jest": "^29.5.14",
         "@types/react": "^19.0.2",
         "@types/react-dom": "^19.0.2",
         "@typescript-eslint/eslint-plugin": "^6.21.0",
