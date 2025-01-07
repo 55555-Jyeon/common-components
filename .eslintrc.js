@@ -13,9 +13,12 @@ module.exports = {
             env: {
                 node: true,
             },
-            files: [".eslintrc.{js,cjs}"],
+            files: ["*.ts", "*.tsx"],
             parserOptions: {
                 sourceType: "script",
+            },
+            rules: {
+                "@typescript-eslint/no-var-requires": "off",
             },
         },
     ],
@@ -23,6 +26,7 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
         extraFileExtensions: [".scss"],
+        project: "./tsconfig.json",
     },
     plugins: ["react"],
     rules: {

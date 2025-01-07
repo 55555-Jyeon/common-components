@@ -93,7 +93,9 @@
     },
     "include": [
         "./src/**/*", // 프로젝트의 모든 TypeScript 파일 포함
+        "craco.config.ts",
         "./.eslintrc.js", // ESLint 설정 파일 포함
-        "global.d.ts"
+        "global.d.ts",
+        "./cargo.config.ts"
     ]
 }
