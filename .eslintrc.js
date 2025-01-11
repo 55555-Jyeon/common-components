@@ -7,6 +7,7 @@ module.exports = {
         "standard-with-typescript",
         "plugin:react/recommended",
         "plugin:prettier/recommended",
+        "plugin:import/typescript",
     ],
     parserOptions: {
         ecmaVersion: "latest",
@@ -14,7 +15,7 @@ module.exports = {
         extraFileExtensions: [".scss", ".css"], // SCSS 및 CSS 확장자 추가
         project: "./tsconfig.json",
     },
-    plugins: ["react", "import"], // import 플러그인 추가
+    plugins: ["react", "import"],
     rules: {
         "react/react-in-jsx-scope": "off", // React 17 이상에서는 필요 없음
         "prettier/prettier": ["error", { endOfLine: "auto" }], // Prettier와 줄바꿈 충돌 방지
@@ -22,7 +23,7 @@ module.exports = {
         "import/extensions": [
             // 확장자 처리
             "error",
-            "always",
+            "ignorePackages",
             {
                 js: "never",
                 jsx: "never",

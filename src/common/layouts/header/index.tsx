@@ -1,6 +1,6 @@
 import header from "./style.module.scss";
 
-export const Header = (): JSX.Element => {
+const Header = (): JSX.Element => {
     return (
         <div className={header.container}>
             <div className={header.logo}>LOGO</div>
@@ -12,3 +12,4 @@ export const Header = (): JSX.Element => {
         </div>
     );
 };
+export default Header;
