@@ -1,13 +1,17 @@
-@import "src/common/styles/common.scss";
+@import "src/common/styles/common";
 
 .container {
-    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: px2rem(60px);
     padding: 0 px2rem(40px);
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: aliceblue;
 }
 
 .logo {
