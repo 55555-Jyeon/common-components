@@ -7,32 +7,42 @@ module.exports = {
         "standard-with-typescript",
         "plugin:react/recommended",
         "plugin:prettier/recommended",
+        "plugin:import/typescript",
     ],
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: [".eslintrc.{js,cjs}"],
-            parserOptions: {
-                sourceType: "script",
-            },
-        },
-    ],
+    parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
-        extraFileExtensions: [".scss"],
+        project: "./tsconfig.json",
     },
-    plugins: ["react"],
+    plugins: ["react", "import"],
     rules: {
-        "react/react-in-jsx-scope": "off", // React 17 이상에서는 필요 없음
-        "prettier/prettier": ["error", { endOfLine: "auto" }], // Prettier와 줄바꿈 충돌 방지
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": ["error", { endOfLine: "auto" }],
         "@typescript-eslint/consistent-type-definitions": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                js: "never",
+                jsx: "never",
+                ts: "never",
+                tsx: "never",
+                scss: "always",
+                css: "always",
+            },
+        ],
+        "import/no-unresolved": "error",
     },
     settings: {
         react: {
-            version: "detect", // React 버전을 자동으로 감지
+            version: "detect",
+        },
+        "import/resolver": {
+            typescript: {
+                alwaysTryTypes: true,
+            },
         },
     },
+    ignorePatterns: ["*.scss", "*.css", ".eslintrc.js"],
 };
