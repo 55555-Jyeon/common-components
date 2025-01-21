@@ -1,55 +1,56 @@
-@import '../../../../../../styles/common';
+@import "../../../../../../styles/common";
 
 $tr-height: $twenty-eight;
 $border-color: $system-black-01;
 $thead-color: #f7fafd;
 
 .fixedContents {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  @include flex-vertical(space-between, row);
-  background-color: $system-white;
-
-  p {
-    span {
-      text-align: center;
-      line-height: $twelve;
-    }
-  }
-
-  /* 활성화 아이콘 */
-  .isActivate {
-    position: absolute;
-    top: 0;
-    right: px2rem(34px);
-    width: $tr-height;
+    position: relative;
     height: $tr-height;
-    @include flex-center();
-  }
+    @include flex-vertical(space-between, row);
+    background-color: $system-white;
 
-  /* hover 시 보여지는 상세 정보 보기 버튼 */
-  .infoButton {
-    position: absolute;
-    top: $four;
-    right: $ten;
-    @include flex-center();
+    p {
+        @include flex-center();
 
-    button {
-      width: calc($tr-height - $eight);
-      height: calc($tr-height - $eight);
-      @include flex-center();
-      border-radius: $two;
-      border: $one solid $border-color;
-      background: $system-white;
-      box-shadow: 0 $one $two 0 $border-color;
-      cursor: pointer;
-      overflow: hidden;
-
-      p {
-        font-size: $sixteen;
-        color: $system-black-05;
-      }
+        span {
+            text-align: center;
+            line-height: $twelve;
+        }
     }
-  }
+
+    /* 활성화 아이콘 */
+    .isActivate {
+        position: absolute;
+        top: 0;
+        right: px2rem(34px);
+        width: $tr-height;
+        height: $tr-height;
+        @include flex-center();
+    }
+
+    /* hover 시 보여지는 상세 정보 보기 버튼 */
+    .infoButton {
+        position: absolute;
+        top: $four;
+        right: $ten;
+        @include flex-center();
+
+        button {
+            width: calc($tr-height - $eight);
+            height: calc($tr-height - $eight);
+            @include flex-center();
+            border-radius: $two;
+            border: $one solid $border-color;
+            background: $system-white;
+            box-shadow: 0 $one $two 0 $border-color;
+            cursor: pointer;
+            overflow: hidden;
+
+            p {
+                font-size: $sixteen;
+                color: $system-black-05;
+            }
+        }
+    }
 }
