@@ -44,28 +44,12 @@ const ScrollableContents = ({
         (oneRow) => oneRow.label === row.label && !oneRow.status
     );
 
-    // console.log('renderScrollableContent', renderScrollableContent) //  row => { return row.value; }
-
-    /**
-     * @function renderCellData
-     * @description formattedCellData 유틸 함수로 데이터 가공해서 td 컴포넌트로 감싸 반환
-     * */
-    const renderCellData = (key: string, index: number) => {
-        const cellData = formattedCellData(key, row, renderScrollableContent);
-
-        return (
-            <td
-                key={`${key}-${index}`}
-                className={clsx(styles.scrollableContents, {
-                    [styles.highlighted]:
-                        isHeaderHighlighted(index) && !isRowDeactivated,
-                    [styles.markIntersection]: isIntersectionExist(index),
-                })}
-            >
-                {cellData}
-            </td>
-        );
-    };
+  /**
+   * @function renderCellData
+   * @description formattedCellData 유틸 함수로 데이터 가공해서 td 컴포넌트로 감싸 반환
+   * */
+  const renderCellData = (key: string, index: number) => {
+    const cellData = formattedCellData(key, row, renderScrollableContent)
 
     return (
         <>{headerTitleList.map((key, index) => renderCellData(key, index))}</>
