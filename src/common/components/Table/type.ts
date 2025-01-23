@@ -11,7 +11,12 @@ export type SelectableRowType = {
   status: boolean
   key?: string | number | undefined
   value?: Record<string, string | boolean | number>
-  [key: string]: string | boolean | number | undefined | Record<string, string | boolean | number>
+  [key: string]:
+    | string
+    | boolean
+    | number
+    | undefined
+    | Record<string, string | boolean | number>
 }
 
 /**
@@ -22,13 +27,10 @@ export type SelectableRowType = {
  * @property {string | number} [key] - 고유 키
  * @property {string | number | boolean | undefined} [key: string] - 확장 가능한 프로퍼티
  */
-export type RowType = BasicTableType & {
+export type RowType = {
   label?: string
   status?: boolean
   key?: string | number
-};
-
-export type BasicTableType = {
   [key: string]: string | number | boolean | undefined
 }
 
@@ -72,10 +74,15 @@ export type MMTableProps<T extends boolean> = {
   headerTitleList: string[]
   isHorizontalScrollable: boolean
   isSelectableTable: T
-  verticalScrollData: (SelectableRowType | RowType| BasicTableType)[]
+  verticalScrollData: (SelectableRowType | RowType)[]
   renderFixedContent?: (row: SelectableRowType | RowType) => React.ReactNode
   renderScrollableContent?: (
     row: SelectableRowType | RowType
-  ) => string | number | boolean | Record<string, string | number | boolean> | undefined
+  ) =>
+    | string
+    | number
+    | boolean
+    | Record<string, string | number | boolean>
+    | undefined
   selectableTableState?: selectableTableStateType
 }

@@ -242,7 +242,7 @@ t-body's first tr : z-index 5
           top: 0;
           left: 0;
           width: calc(
-                  $wider-width - px2rem(33px)
+            $wider-width - px2rem(33px)
           ); // 33 = padding(30) + double border(3)
           border-right-style: double;
           background-color: $thead-color;
@@ -250,7 +250,7 @@ t-body's first tr : z-index 5
 
         &:not(:first-of-type) {
           width: calc(
-                  $wider-width - px2rem(41px)
+            $wider-width - px2rem(41px)
           ); // 41 = padding(40) + border(1)
           border-right-style: solid;
           border-width: $one;

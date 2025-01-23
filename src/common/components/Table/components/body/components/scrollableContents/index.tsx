@@ -43,8 +43,6 @@ const ScrollableContents = ({
     (oneRow) => oneRow.label === row.label && !oneRow.status
   )
 
-  // console.log('renderScrollableContent', renderScrollableContent) //  row => { return row.value; }
-
   /**
    * @function renderCellData
    * @description formattedCellData 유틸 함수로 데이터 가공해서 td 컴포넌트로 감싸 반환
