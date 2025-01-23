@@ -30,8 +30,8 @@
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
-            "prettier --write",
-            "eslint --fix"
+            "prettier --write --cache",
+            "eslint --fix --cache"
         ],
         "*.{css,scss}": [
             "prettier --write",
