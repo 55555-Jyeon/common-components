@@ -43,7 +43,9 @@ const SideNavbar = (): JSX.Element => {
                                 isSelected && nav.selected
                             )}
                             key={menu.key}
-                            onClick={() => setSelectedMenu(menu.key)}
+                            onClick={() => {
+                                setSelectedMenu(menu.key);
+                            }}
                         >
                             <Link to={menu.path}>
                                 <img
