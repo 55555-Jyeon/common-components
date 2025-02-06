@@ -1,6 +1,6 @@
 /* common styles hub */
 
-@import "./components/align.scss";
-@import "./components/colors.scss";
-@import "./components/size.scss";
-@import "./components/units.scss";
+@use "./components/align";
+@use "./components/colors";
+@use "./components/size";
+@use "./components/units";
