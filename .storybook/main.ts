@@ -12,8 +12,8 @@ const config: StorybookConfig = {
         autodocs: "tag",
     },
     webpackFinal: async (config) => {
-        config.module = config.module || { rules: [] }; // module이 없으면 초기화
-        config.module.rules = config.module.rules || []; // rules가 없으면 초기화
+        config.module = config.module || { rules: [] };
+        config.module.rules = config.module.rules || [];
 
         config.module.rules.push({
             test: /\.(ts|tsx)$/,
@@ -33,10 +33,21 @@ const config: StorybookConfig = {
 
         config.module.rules.push({
             test: /\.scss$/,
-            use: ["style-loader", "css-loader", "sass-loader"],
+            use: [
+                "style-loader",
+                {
+                    loader: "css-loader",
+                    options: {
+                        modules: {
+                            auto: true,
+                            localIdentName: "[name]__[local]--[hash:base64:5]",
+                        },
+                    },
+                },
+                "sass-loader",
+            ],
         });
 
-        // alias 추가
         config.resolve = config.resolve || {};
         config.resolve.alias = {
             ...(config.resolve.alias || {}),
