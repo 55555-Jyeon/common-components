@@ -3,7 +3,7 @@ import "@/common/styles/common.scss";
 
 const preview: Preview = {
     parameters: {
-        actions: { argTypesRegex: "^on[A-Z].*" },
+        actions: { handles: ["onClick", "onChange"] },
         controls: {
             matchers: {
                 color: /(background|color)$/i,
