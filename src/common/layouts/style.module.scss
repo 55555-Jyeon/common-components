@@ -11,4 +11,14 @@
 .contents {
     position: absolute;
     top: px2rem(60px); // header height
+    width: 100%;
+    height: 100%;
+}
+
+.outlet {
+    position: absolute;
+    top: 0;
+    left: px2rem(80px); // side-navigation-bar width (60px)
+    width: 100%;
+    height: 100%;
 }

@@ -1,9 +1,9 @@
-/* import clsx from "clsx";
+import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import nav from "./style.module.scss";
 import { NavIcons } from "@/assets/icons/nav/NavIcons";
-import { MENU_LIST } from "@/constant/menu-list";
+import { MENU_LIST } from "@/constants/menu-list";
 
 const SideNavbar = (): JSX.Element => {
     const [selectedMenu, setSelectedMenu] = useState<string>("category");
@@ -14,7 +14,7 @@ const SideNavbar = (): JSX.Element => {
         const currentMenu = MENU_LIST.find(
             (menu) => menu.path === location.pathname
         );
-        if (currentMenu) {
+        if (currentMenu !== undefined) {
             setSelectedMenu(currentMenu.key);
         }
     }, [location.pathname]);
@@ -43,7 +43,9 @@ const SideNavbar = (): JSX.Element => {
                                 isSelected && nav.selected
                             )}
                             key={menu.key}
-                            onClick={() => setSelectedMenu(menu.key)}
+                            onClick={() => {
+                                setSelectedMenu(menu.key);
+                            }}
                         >
                             <Link to={menu.path}>
                                 <img
@@ -62,4 +64,3 @@ const SideNavbar = (): JSX.Element => {
     );
 };
 export default SideNavbar;
- */

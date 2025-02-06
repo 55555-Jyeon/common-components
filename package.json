@@ -15,10 +15,10 @@
         "web-vitals": "^4.2.4"
     },
     "scripts": {
-        "start": "carco start",
-        "build": "carco build",
-        "test": "carco test",
-        "eject": "carco eject",
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "eject": "craco eject",
         "prepare": "husky install",
         "lint-staged": "lint-staged",
         "lint:style": "stylelint \"src/**/*.{css,scss}\" --fix"

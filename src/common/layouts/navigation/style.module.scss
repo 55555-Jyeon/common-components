@@ -1,30 +1,30 @@
-@import "@/styles/common.scss";
+@import "src/common/styles/common";
 
 .container {
     position: relative;
     left: 0;
-    width: 60px;
+    width: px2rem(60px);
     height: 100%;
-    border-right: 1px solid $system-black-01;
-    padding: 10px;
+    border-right: $one solid $system-black-01;
+    padding: $ten;
 }
 
 .upper {
-    border-bottom: 1px solid $system-grey-20;
+    border-bottom: $one solid $system-grey-20;
     @include flex-vertical(space-around);
-    padding: 10px 0;
+    padding: $ten 0;
 }
 
 .lower {
     @include flex-vertical(space-around);
-    padding: 10px 0;
+    padding: $ten 0;
 }
 
 .menu {
     position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 2px;
+    width: px2rem(40px);
+    height: px2rem(40px);
+    border-radius: $two;
     cursor: pointer;
     background-color: transparent;
     @include flex-center;
@@ -32,9 +32,9 @@
     &::before {
         display: none;
         content: "";
-        width: 2px;
-        height: 20px;
-        border-radius: 100px;
+        width: $two;
+        height: $twenty;
+        border-radius: $hundred;
         background-color: $brand-blue-50;
         position: absolute;
         left: 0;
@@ -55,7 +55,7 @@
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+    width: $twenty;
+    height: $twenty;
+    margin: $ten;
 }
