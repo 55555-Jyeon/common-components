@@ -3,7 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import SideNavbar from "./navigation/page";
 import layout from "./style.module.scss";
-import PageDescription from "./description/page";
+import PageDescription from "./description";
 
 const Layout = (): JSX.Element => {
     return (

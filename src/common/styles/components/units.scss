@@ -1,20 +1,17 @@
-@import "./size.scss";
+@use "./size" as size;
 
 /* 자주 사용되는 크기 */
 
-$hundred: px2rem(100px);
-
-$twenty-eight: px2rem(28px);
-$twenty-five: px2rem(25px);
-$twenty: px2rem(20px);
-
-$eighteen: px2rem(18px);
-$sixteen: px2rem(16px);
-$twelve: px2rem(12px);
-$ten: px2rem(10px);
-
-$eight: px2rem(8px);
-$five: px2rem(5px);
-$four: px2rem(4px);
-$two: px2rem(2px);
-$one: px2rem(1px);
+$hundred: size.px2rem(100px);
+$twenty-eight: size.px2rem(28px);
+$twenty-five: size.px2rem(25px);
+$twenty: size.px2rem(20px);
+$eighteen: size.px2rem(18px);
+$sixteen: size.px2rem(16px);
+$twelve: size.px2rem(12px);
+$ten: size.px2rem(10px);
+$eight: size.px2rem(8px);
+$five: size.px2rem(5px);
+$four: size.px2rem(4px);
+$two: size.px2rem(2px);
+$one: size.px2rem(1px);
