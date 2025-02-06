@@ -1,12 +1,12 @@
-@import "src/common/styles/common";
+@use "@/common/styles/common" as common;
 
 .container {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: px2rem(60px);
-    padding: 0 px2rem(40px);
+    height: common.px2rem(60px);
+    padding: 0 common.px2rem(40px);
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,11 +15,11 @@
 }
 
 .logo {
-    width: px2rem(80px);
+    width: common.px2rem(80px);
 }
 
 .iconWrapper {
-    width: px2rem(80px);
+    width: common.px2rem(80px);
     display: flex;
     flex-direction: row;
     align-items: center;

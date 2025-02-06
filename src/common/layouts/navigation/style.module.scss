@@ -1,41 +1,45 @@
-@import "src/common/styles/common";
+@use "@/common/styles/common.scss" as common;
 
 .container {
     position: relative;
     left: 0;
-    width: px2rem(60px);
+    width: common.px2rem(60px);
     height: 100%;
-    border-right: $one solid $system-black-01;
-    padding: $ten;
+    border-right: common.$one solid common.$system-black-01;
+    padding: common.$ten;
 }
 
 .upper {
-    border-bottom: $one solid $system-grey-20;
-    @include flex-vertical(space-around);
-    padding: $ten 0;
+    border-bottom: common.$one solid common.$system-grey-20;
+
+    @include common.flex-vertical(space-around);
+
+    padding: common.$ten 0;
 }
 
 .lower {
-    @include flex-vertical(space-around);
-    padding: $ten 0;
+    @include common.flex-vertical(space-around);
+
+    padding: common.$ten 0;
 }
 
 .menu {
     position: relative;
-    width: px2rem(40px);
-    height: px2rem(40px);
-    border-radius: $two;
+    width: common.px2rem(40px);
+    height: common.px2rem(40px);
+    border-radius: common.$two;
     cursor: pointer;
     background-color: transparent;
-    @include flex-center;
+
+    @include common.flex-center;
 
     &::before {
         display: none;
         content: "";
-        width: $two;
-        height: $twenty;
-        border-radius: $hundred;
-        background-color: $brand-blue-50;
+        width: common.$two;
+        height: common.$twenty;
+        border-radius: common.$hundred;
+        background-color: common.$brand-blue-50;
         position: absolute;
         left: 0;
     }
@@ -47,7 +51,7 @@
 }
 
 .selected {
-    background-color: $system-grey-10;
+    background-color: common.$system-grey-10;
 
     &::before {
         display: inline-block;
@@ -55,7 +59,7 @@
 }
 
 .icon {
-    width: $twenty;
-    height: $twenty;
-    margin: $ten;
+    width: common.$twenty;
+    height: common.$twenty;
+    margin: common.$ten;
 }

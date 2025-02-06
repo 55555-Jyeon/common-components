@@ -1,13 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Header from "./index";
+import React from "react";
+import { type Meta, type StoryFn } from "@storybook/react";
+import Header from "../header/index";
 
-const meta: Meta<typeof Header> = {
-    title: "Common/Header",
+const meta: Meta = {
+    title: "Components/Header",
     component: Header,
 };
-
 export default meta;
 
-type Story = StoryObj<typeof Header>;
+const Template: StoryFn = (args: any) => <Header {...args} />;
 
-export const Default: Story = {};
+export const Default = Template.bind({});
+Default.args = {
+    // 기본값 설정 (필요한 경우)
+};
