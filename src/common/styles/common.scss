@@ -1,6 +1,12 @@
 /* common styles hub */
 
-@import "./components/align.scss";
-@import "./components/colors.scss";
-@import "./components/size.scss";
-@import "./components/units.scss";
+@use "./components/align" as align;
+@use "./components/colors" as color;
+@use "./components/size" as size;
+@use "./components/units" as unit;
+
+// 긱 모듈을 다시 export
+@forward "./components/align";
+@forward "./components/colors";
+@forward "./components/size";
+@forward "./components/units";

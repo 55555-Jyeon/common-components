@@ -1,11 +1,12 @@
-import header from "./style.module.scss";
+import React from "react";
+import styles from "./style.module.scss";
 
 const Header = (): JSX.Element => {
     return (
-        <div className={header.container}>
-            <div className={header.logo}>LOGO</div>
+        <div className={styles.container}>
+            <div className={styles.logo}>LOGO</div>
             <h3>MCC ZIP</h3>
-            <div className={header.iconWrapper}>
+            <div className={styles.iconWrapper}>
                 <div>menu</div>
                 <div>user</div>
             </div>
