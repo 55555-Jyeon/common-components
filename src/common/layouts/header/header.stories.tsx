@@ -8,6 +8,7 @@ const meta: Meta = {
 };
 export default meta;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Template: StoryFn = (args: any) => <Header {...args} />;
 
 export const Default = Template.bind({});

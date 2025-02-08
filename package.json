@@ -150,6 +150,7 @@
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@types/storybook__addons": "^4.1.1",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "babel-loader": "^9.2.1",
