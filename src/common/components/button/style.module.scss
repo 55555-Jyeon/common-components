@@ -1,0 +1,41 @@
+@use "@/common/styles/common.scss" as common;
+@use "./button.style.scss" as buttonMixin;
+
+/* button scss */
+.base {
+    border-radius: common.$two;
+    border: none;
+
+    @include common.flex-center;
+
+    white-space: nowrap;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &.solidBlue {
+        @include buttonMixin.solid(common.$brand-blue-40);
+    }
+
+    &.solidBlack {
+        @include buttonMixin.solid(common.$system-black-08);
+    }
+
+    &.outlineBlue {
+        @include buttonMixin.outline(rgba(17, 106, 204, 0.5));
+
+        color: common.$brand-blue-40;
+        border: common.$one solid rgb(17 106 204 / 50%);
+    }
+
+    &.outlineBlack {
+        @include buttonMixin.outline(rgba(0, 0, 0, 0.15));
+
+        border: common.$one solid rgb(0 0 0 / 15%);
+        color: common.$system-black-09;
+    }
+
+    &.lightSolidBlue {
+        @include buttonMixin.light-solid(common.$brand-blue-40);
+    }
+}
