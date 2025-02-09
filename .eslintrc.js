@@ -21,6 +21,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "prettier/prettier": ["error", { endOfLine: "auto" }],
         "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
         "import/extensions": [
             "error",
             "ignorePackages",

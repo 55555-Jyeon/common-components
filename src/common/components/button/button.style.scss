@@ -1,0 +1,99 @@
+@use "@/common/styles/common.scss" as common;
+@use "sass:color";
+
+/* solid(contained) style */
+@mixin solid($button-color) {
+    color: common.$system-white;
+    background-color: $button-color;
+
+    &:hover {
+        background-color: color.adjust($button-color, $lightness: 8%);
+    }
+
+    &:active {
+        background-color: color.adjust($button-color, $lightness: 1.4%);
+    }
+
+    &.disabled {
+        opacity: 0.4;
+    }
+}
+
+/* outline style */
+@mixin outline($button-color) {
+    background-color: common.$system-white;
+
+    /* button rgb color */
+    $button-color-r: color.red($button-color);
+    $button-color-g: color.green($button-color);
+    $button-color-b: color.blue($button-color);
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba($button-color-r, $button-color-g, $button-color-b, 4%) 0%,
+                rgba($button-color-r, $button-color-g, $button-color-b, 4%) 100%
+            ),
+            common.$system-white;
+    }
+
+    &:active {
+        background: linear-gradient(
+                0deg,
+                rgba($button-color-r, $button-color-g, $button-color-b, 8%) 0%,
+                rgba($button-color-r, $button-color-g, $button-color-b, 8%) 100%
+            ),
+            common.$system-white;
+    }
+
+    &.disabled {
+        background: linear-gradient(
+                0deg,
+                rgba($button-color-r, $button-color-g, $button-color-b, 10%) 0%,
+                rgba($button-color-r, $button-color-g, $button-color-b, 10%)
+                    100%
+            ),
+            common.$system-white;
+        opacity: 0.4;
+    }
+}
+
+/* light solid style */
+@mixin light-solid($button-color) {
+    /* button rgb color */
+    $button-color-r: color.red($button-color);
+    $button-color-g: color.green($button-color);
+    $button-color-b: color.blue($button-color);
+
+    color: $button-color;
+    background: linear-gradient(
+            0deg,
+            rgba($button-color-r, $button-color-g, $button-color-b, 10%) 0%,
+            rgba($button-color-r, $button-color-g, $button-color-b, 10%) 100%
+        ),
+        #fff;
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba($button-color-r, $button-color-g, $button-color-b, 14%) 0%,
+                rgba($button-color-r, $button-color-g, $button-color-b, 14%)
+                    100%
+            ),
+            #fff;
+    }
+
+    &:active {
+        background: linear-gradient(
+                0deg,
+                rgba($button-color-r, $button-color-g, $button-color-b, 18%) 0%,
+                rgba($button-color-r, $button-color-g, $button-color-b, 18%)
+                    100%
+            ),
+            #fff;
+    }
+
+    &.disabled {
+        opacity: 0.6;
+    }
+}
